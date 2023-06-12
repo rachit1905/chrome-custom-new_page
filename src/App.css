@@ -1,38 +1,66 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  width: 100vw;
+}
+
+#searchBar {
+  background-color: transparent;
+  border: none;
+  font-family: 'Onest';
+  padding: 0;
+  text-align: center;
   color: white;
+  font-size: xx-large;
+  outline: none;
+  cursor: default;
+  width: 70vw;
+  position: relative;
+  left: 5vw;
+  margin-bottom: 60vh;
+}
+#searchBar:empty{
+  caret-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+svg {
+  height: 40vh;
+  width: 40vh;
+  position: absolute;
+  fill: white;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  margin-bottom: 60vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.suggest {
+  width: 80vw;
+  margin:  0 10vw;
+  position: absolute;
+  bottom: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20vh;
+  overflow: visible;
+}
+.suggest div:empty{
+  display: none;
+}
+
+.suggest div {
+  text-align: center;
+  /* background-color: #33363b; */
+  color: white;
+  font-size: x-large;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  width: max-content;
+  padding: 5px 10px;
+  margin: 10px;
+  min-width: 40%;
+}
+.suggest div:first-child{
+  display: none;
 }
